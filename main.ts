@@ -14,7 +14,6 @@ basic.showIcon(IconNames.Happy)
 
 // 
 while (true) {
-  if (input.buttonIsPressed(Button.A) == true) {
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
       distanceToObject = sonar.ping(
@@ -22,11 +21,12 @@ while (true) {
         DigitalPin.P2,
         PingUnit.Centimeters
       )
-   
+      basic.showNumber(distanceToObject)
+      basic.showString("cm")
+
      if (distanceToObject < 10) {
-       radio.sendString("X")
+       radio.sendString("X                                                                       ")
      } else {
        radio.sendString("*")
      }
   }
-}
