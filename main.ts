@@ -1,8 +1,12 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: Daki A.B
+ * Created on: Dec 2023
+ * This program uses radios to connect to another MicroBit
 */
 
-basic.showString('Hello, World!')
+// variables
+
+
+// setup
+radio.setGroup(154)
