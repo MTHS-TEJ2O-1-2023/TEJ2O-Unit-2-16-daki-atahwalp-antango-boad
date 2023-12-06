@@ -6,7 +6,26 @@
 */
 
 // variables
-
+let distanceToObject: number = 0
 
 // setup
 radio.setGroup(154)
+basic.showIcon(IconNames.Happy)
+
+// 
+while (true) {
+  if (input.buttonIsPressed(Button.A) == true) {
+    basic.clearScreen()
+      distanceToObject = sonar.ping(
+        DigitalPin.P1,
+        DigitalPin.P2,
+        PingUnit.Centimeters
+      )
+   
+     if (distanceToObject < 10) {
+       radio.sendString("X")
+     } else {
+       radio.sendString("*")
+     }
+  }
+}
