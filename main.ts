@@ -14,13 +14,13 @@ basic.showIcon(IconNames.Happy)
 
 // 
 while (true) {
-    basic.clearScreen()
     basic.showIcon(IconNames.Happy)
       distanceToObject = sonar.ping(
         DigitalPin.P1,
         DigitalPin.P2,
         PingUnit.Centimeters
       )
+      basic.clearScreen()
       basic.showNumber(distanceToObject)
       basic.showString("cm")
 
@@ -29,4 +29,4 @@ while (true) {
      } else {
        radio.sendString("*")
      }
-  }
+}
