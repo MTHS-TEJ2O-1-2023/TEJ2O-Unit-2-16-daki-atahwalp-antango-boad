@@ -16,6 +16,7 @@ basic.showIcon(IconNames.Happy)
 while (true) {
   if (input.buttonIsPressed(Button.A) == true) {
     basic.clearScreen()
+    basic.showIcon(IconNames.Happy)
       distanceToObject = sonar.ping(
         DigitalPin.P1,
         DigitalPin.P2,
