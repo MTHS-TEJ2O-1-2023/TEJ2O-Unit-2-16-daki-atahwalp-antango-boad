@@ -12,8 +12,7 @@ let distanceToObject: number = 0
 radio.setGroup(154)
 basic.showIcon(IconNames.Happy)
 
-while (true) {
-  if (input.buttonIsPressed(Button.A) === true) {
+input.onButtonPressed(Button.A, function () {
     // finding distance
     basic.showIcon(IconNames.Happy)
     distanceToObject = sonar.ping(
@@ -21,12 +20,14 @@ while (true) {
       DigitalPin.P2,
       PingUnit.Centimeters
     )
-    //sending message to other microbit
+    // sending message to other microbit
     if (distanceToObject <= 10) {
       radio.sendString('!')
+    } else {
+      radio.sendString('*')
     }
-  }
-}
+})
+
 // receiving messages
 radio.onReceivedString(function (recievedString) {
     basic.clearScreen()
