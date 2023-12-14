@@ -24,8 +24,6 @@ while (true) {
     //sending message to other microbit
     if (distanceToObject <= 10) {
       radio.sendString('!')
-      } else {
-      radio.sendString('*')
     }
   }
 }
