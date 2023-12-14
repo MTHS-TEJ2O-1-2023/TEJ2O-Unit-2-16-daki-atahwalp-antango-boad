@@ -25,7 +25,7 @@ while (true) {
       basic.showString("cm")
 
      if (distanceToObject < 10) {
-       radio.sendString("X                                                                       ")
+       radio.sendString("!")
      } else {
        radio.sendString("*")
      }
