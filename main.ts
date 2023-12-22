@@ -28,8 +28,8 @@ input.onButtonPressed(Button.A, function () {
 })
 
 // receiving message
-  radio.onReceivedString(function (receivedString) {
-    basic.clearScreen()
-    basic.showString(receivedString)
-    basic.showIcon(IconNames.Happy)
+radio.onReceivedString(function (receivedString) {
+  basic.clearScreen()
+  basic.showString(receivedString)
+  basic.showIcon(IconNames.Happy)
 })
